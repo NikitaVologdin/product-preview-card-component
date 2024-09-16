@@ -1,0 +1,153 @@
+@import "_variables"
+
+html, body
+    height: 100%
+
+body
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    background-color: $cream
+
+main
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 1.75rem 0
+
+article
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: $white
+    max-width: 21.5rem
+    border-radius: 10px
+
+img 
+    max-inline-size: 100%
+    block-size: auto
+
+.image-container
+    img
+        border-radius: 10px 10px 0 0
+
+.article__body
+    padding: 2rem
+    padding-top: 1.8rem
+
+.category
+    margin-bottom: 1rem
+    em
+        color: $dark-grayish-blue
+        text-transform: uppercase
+        font-style: normal
+        letter-spacing: 0.3125rem
+        font-weight: 500
+        font-size: 0.75rem
+        @include font-montserrat
+
+.heading
+    margin-top: 0.75rem
+
+    h1
+        font-size: 2rem
+        font-weight: 700
+        line-height: 2rem
+        color: $dark-blue
+        @include font-fraunces
+
+.description
+    margin-top: 1.5rem
+
+    p
+        color: $dark-grayish-blue
+        font-size: 0.875rem
+        font-weight: 500
+        line-height: 1.43rem
+        @include font-montserrat
+
+.price
+    margin-top: 1.8125rem
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+
+    p
+        font-size: 2rem
+        font-weight: 700
+        line-height: 2rem
+        color: $dark-cyan
+        @include font-fraunces
+    
+    span
+        color: $dark-grayish-blue
+        font-size: 0.8125rem
+        font-weight: 500
+        line-height: 1.43rem
+        margin-left: 1.1875rem
+        text-decoration: line-through
+        @include font-montserrat
+        
+.action
+    margin-top: 1.875rem
+
+    button
+        width: 100%
+        padding: 0.84375rem 0
+        border: none
+        border-radius: 8px
+        background-color: $dark-cyan
+        cursor: pointer
+        display: flex
+        gap: 0.725625rem
+        align-items: center
+        justify-content: center
+        transition: background-color ease-in 0.3s
+
+        &:hover
+            background-color: $dark-cyan-hover
+
+        span
+            color: $white
+            font-weight: 700
+            font-size: 0.875rem
+            @include font-montserrat
+
+
+footer
+    flex-shrink: 1
+    margin-top: 0.875rem
+
+.attribution 
+    font-size: 11px
+    text-align: center
+
+.attribution a 
+    color: hsl(228, 45%, 44%)
+      
+@media  screen and (min-width: 48rem) 
+    main
+        padding: 0
+        margin: 0
+
+    article
+        flex-direction: row
+        max-width: 37.5rem
+        height: 28.125rem
+
+        
+        .image-container
+            max-width: 18.75rem
+            flex-grow: 1
+
+            img
+                width: 100%
+                border-radius: 10px 0 0 10px 
+        
+        .article__body
+            height: 100%
+            flex-shrink: 2
+                
+
